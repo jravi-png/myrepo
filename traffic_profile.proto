@@ -1,0 +1,15 @@
+// traffic_profile.proto
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+
+message TrafficProfile {
+    uint32 source_ip = 1;
+    uint32 destination_ip = 2;
+    uint16 source_port = 3;
+    uint16 destination_port = 4;
+    uint32 packet_count = 5;
+    uint64 byte_count = 6;
+    double average_packet_size = 7;
+}
