@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(heart_rate_optimizer)
+
+find_package(LLVM REQUIRED CONFIG)
+include_directories(${LLVM_INCLUDE_DIRS})
+link_directories(${LLVM_LIBRARY_DIRS})
+add_executable(heart_rate_optimizer optimizer.cpp)
+target_link_libraries(heart_rate_optimizer clangTooling clangBasic clangAST clangAnalysis clangRewriteFrontend)
