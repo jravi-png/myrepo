@@ -1,0 +1,7 @@
+project(ast_optimization)
+
+find_package(Clang REQUIRED)
+
+add_executable(ast_optimization ast_optimization.cpp)
+
+target_link_libraries(ast_optimization ${CLANG_LIBRARIES})
