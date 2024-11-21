@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+project(web_crawler)
+
+set(CMAKE_CXX_STANDARD 17)
+
+find_package(CURL REQUIRED)
+find_package(Pugixml REQUIRED)
+
+add_executable(web_crawler main.cpp)
+
+target_link_libraries(web_crawler ${CURL_LIBRARIES} ${PUGIXML_LIBRARIES})
